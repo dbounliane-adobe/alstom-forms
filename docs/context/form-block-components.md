@@ -2,6 +2,51 @@
 
 This document describes the rendering pipeline, component decorator system, and view update mechanisms for form components in the AEM Boilerplate Forms project.
 
+## Site Theme and Universal Editor Authoring
+
+The Alstom-inspired theme uses shared tokens in `styles/styles.css` for the brand
+palette, typography, spacing, links, buttons, and keyboard focus. It uses the
+existing, locally hosted Roboto fonts as an alternative to Alstom's proprietary
+heading font; no external font or official brand asset is downloaded at runtime.
+Header, footer, hero, cards, and columns keep their existing content models and
+instrumentation. Form variables in `blocks/form/form.css` reuse the site palette
+without changing rendering, rules, worker messages, or submission endpoints.
+Form columns authored through `colspan` remain unchanged on larger screens and
+stack at widths below 600px.
+
+The section Style selector exposes `highlight` (existing), `light`, `dark`, and
+`contact`. Use one background style per section. The Contact style provides a
+light background around introductory content and the form card. Change source
+models in `models/_section.json`, then run `npm run build:json`; do not edit the
+generated root component JSON files by hand.
+
+Page content and shared fragments are supplied by AEM, not by this repository.
+Deploying the theme does not replace existing placeholder text or the Adobe
+navigation/footer content. To compose the contact-oriented landing page:
+
+1. In Universal Editor, replace the introductory placeholder section with a Hero.
+   Supply an approved railway image, alternative text, one H1, a short introduction,
+   and a bold link to the contact section. The hero remains readable without an image.
+2. Add a section with an H2 and three Cards for the relevant solutions or services.
+   Keep titles and links editable; link only to existing destinations.
+3. Optionally add a Dark section with Columns for supporting information and a CTA.
+4. Put the contact introduction and existing Adaptive Form in a Contact section.
+   Preserve field names, rules, actions, and submission configuration. Set the
+   contact section's anchor in AEM and use that actual anchor for CTA links.
+5. Edit `/nav` (brand, navigation, tools) and `/footer`, or the paths supplied by
+   the page's `nav` and `footer` metadata. Replace the sample brand and Adobe
+   copyright with approved content. Use a licensed logo and appropriate image
+   variants for light and dark backgrounds.
+6. Preview the page and fragments, then verify both preview and edit modes in
+   Universal Editor before publication. Verify real submission only in an
+   authorized test environment; local theme tests mock the submission endpoint.
+
+The offline Playwright fixture in `test/e2e/theme/fixtures/alstom.html` demonstrates
+this composition using an original placeholder illustration, not official assets.
+Run `npm run test:e2e -- --config=test/e2e/theme/playwright.config.js` to check
+desktop/mobile layouts, keyboard navigation, instrumentation, worker validation,
+and mocked submission without an AEM login.
+
 ## Section 1: Rendering Pipeline
 
 **One-line flow:**

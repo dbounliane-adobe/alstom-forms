@@ -73,6 +73,7 @@ blocks/form/
 - **Imports**: Always use `.js` extensions in import paths
 - **Indentation**: 2 spaces for JavaScript, 4 spaces for CSS
 - **Linebreaks**: Unix (`\n`), not Windows (`\r\n`)
+- **Site theme**: Shared Alstom-inspired tokens live in `styles/styles.css`; form defaults reuse them in `blocks/form/form.css`. See the authoring recipe in `docs/context/form-block-components.md`.
 - **Pre-commit Hook**: Runs lint + unit tests automatically
 - **Keep docs in sync**: When changing architecture, message protocols, rendering pipeline, or component systems in `blocks/form/`, update the corresponding files in `docs/context/` and this file. Do not use line numbers in documentation — they go stale.
 - **CLAUDE.md length limit**: This file MUST NOT exceed 200 lines. If it reaches 200 lines, split content into topic-specific files in `docs/` and reference them from CLAUDE.md.

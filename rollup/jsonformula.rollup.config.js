@@ -1,7 +1,7 @@
 import cleanup from 'rollup-plugin-cleanup';
 import license from 'rollup-plugin-license';
 import path from 'path';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import { readLicenseFile } from './common';
 
 const pkgname = '@adobe/json-formula'

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alstom theme preview</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script type="module" src="/scripts/scripts.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="hero" data-aue-resource="urn:theme:hero">
+          <div>
+            <div>
+              <picture>
+                <img src="/test/e2e/theme/fixtures/rail.svg" alt="" width="1600" height="800">
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h1>Ensemble, donnons une nouvelle dimension &agrave; la mobilit&eacute;.</h1>
+              <p>Des solutions ferroviaires pour relier les territoires et accompagner vos projets.</p>
+              <p><strong><a href="#contact">Parlons de votre projet</a></strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Accompagner la mobilit&eacute; de demain</h2>
+        <p>Un savoir-faire au service de chaque trajet.</p>
+        <div class="cards">
+          <div data-aue-resource="urn:theme:card-1">
+            <div><h3>Mat&eacute;riel roulant</h3><p>Des solutions adapt&eacute;es aux besoins des voyageurs et des territoires.</p><p><a href="#contact">Discuter de votre projet</a></p></div>
+          </div>
+          <div data-aue-resource="urn:theme:card-2">
+            <div><h3>Signalisation</h3><p>Accompagner l'exploitation et la modernisation des r&eacute;seaux.</p><p><a href="#contact">Contacter notre &eacute;quipe</a></p></div>
+          </div>
+          <div data-aue-resource="urn:theme:card-3">
+            <div><h3>Services</h3><p>Prendre soin des flottes tout au long de leur cycle de vie.</p><p><a href="#contact">Partager votre besoin</a></p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="columns">
+          <div>
+            <div><h2>Construisons votre prochain projet</h2></div>
+            <div><p>Nos &eacute;quipes vous accompagnent pour identifier les solutions qui r&eacute;pondent &agrave; vos enjeux.</p><p><strong><a href="#contact">Nous contacter</a></strong></p></div>
+          </div>
+        </div>
+        <div class="section-metadata"><div><div>Style</div><div>dark</div></div></div>
+      </div>
+      <div id="contact">
+        <h2>Parlons de votre projet</h2>
+        <p>Pr&eacute;sentez-nous votre besoin. Les champs marqu&eacute;s d'un ast&eacute;risque sont obligatoires.</p>
+        <div class="form" data-aue-resource="urn:theme:form">
+          <div><div><pre><code>{
+            "id": "theme-contact",
+            "fieldType": "form",
+            "action": "/theme-submit",
+            "lang": "fr-FR",
+            "thankYouMsg": "Merci, votre demande a bien \u00e9t\u00e9 envoy\u00e9e.",
+            "items": [
+              {
+                "id": "contact-name", "name": "name", "fieldType": "text-input",
+                "type": "string", "required": true,
+                "label": { "value": "Nom complet" },
+                "constraintMessages": { "required": "Veuillez renseigner votre nom." },
+                "properties": { "colspan": "6" }
+              },
+              {
+                "id": "contact-email", "name": "email", "fieldType": "email",
+                "type": "string", "required": true,
+                "label": { "value": "Adresse e-mail" },
+                "properties": { "colspan": "6" }
+              },
+              {
+                "id": "contact-reference", "name": "reference", "fieldType": "text-input",
+                "type": "string", "enabled": false, "default": "DEMO",
+                "label": { "value": "R\u00e9f\u00e9rence" }
+              },
+              {
+                "id": "contact-message", "name": "message", "fieldType": "multiline",
+                "type": "string", "required": true,
+                "label": { "value": "Votre demande" }
+              },
+              {
+                "id": "contact-submit", "name": "submit", "fieldType": "button",
+                "buttonType": "submit", "label": { "value": "Envoyer ma demande" }
+              }
+            ]
+          }</code></pre></div></div>
+        </div>
+        <div class="section-metadata"><div><div>Style</div><div>contact</div></div></div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

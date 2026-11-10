@@ -33,6 +33,18 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Light background",
+              "value": "light"
+            },
+            {
+              "name": "Alstom dark background",
+              "value": "dark"
+            },
+            {
+              "name": "Contact",
+              "value": "contact"
             }
           ]
         }

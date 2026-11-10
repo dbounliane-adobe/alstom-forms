@@ -18,14 +18,30 @@ Furthremore, we encourage you to watch the recordings of any of our previous pre
 
 ## Prerequisites
 
-- nodejs 18.3.x or newer
+- Node.js 20 or newer
 - AEM Cloud Service release 2024.8 or newer (>= `17465`)
 
+Node.js 22 LTS with npm 10 is recommended (see `.nvmrc`). With Node.js 26.3.0,
+the Playwright Chromium installation can hang during archive extraction.
+
 ## Installation
+
+If you use [nvm](https://github.com/nvm-sh/nvm), select the recommended Node.js version first:
+
+```sh
+nvm install
+nvm use
+```
 
 ```sh
 npm i
 ```
+
+The postinstall script downloads Chromium for Playwright. Use
+`npm install --foreground-scripts` to see its progress.
+
+For npm 12, `.npmrc` allows direct Git dependencies (`allow-git=root`), which
+is required by `eslint-plugin-xwalk`. Transitive Git dependencies remain blocked.
 
 ## Linting
 

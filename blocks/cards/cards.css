@@ -1,19 +1,41 @@
+.cards {
+  --focus-color: var(--brand-blue);
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 32px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  border: 1px solid #e6e9ef;
+  border-bottom: 3px solid var(--brand-red);
   background-color: var(--background-color);
+  color: var(--text-color);
+  overflow: hidden;
+  min-width: 0;
+  transition: box-shadow 0.2s;
+}
+
+.cards > ul > li:hover,
+.cards > ul > li:focus-within {
+  box-shadow: 0 12px 32px rgb(20 40 70 / 10%);
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  margin: 28px;
+}
+
+.cards .cards-card-body :is(h2, h3, h4) {
+  margin-top: 0;
+}
+
+.cards .cards-card-body a:not(.button) {
+  font-weight: 500;
 }
 
 .cards .cards-card-image {
