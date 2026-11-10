@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+  url: https://author-p199354-e2062419.adobeaemcloud.com/bin/franklin.delivery/dbounliane-adobe/alstom-forms/main
+  type: "markup"
+  suffix: ".html"
