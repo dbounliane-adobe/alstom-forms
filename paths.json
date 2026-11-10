@@ -1,9 +1,11 @@
 {
   "mappings": [
-    "/:/"
+    "/content/alstom-forms/:/",
+    "/content/alstom-forms/configuration:/.helix/config.json",
+    "/content/forms/af/:/forms/"
   ],
   "includes": [
-    "/content/",
+    "/content/alstom-forms/",
     "/content/dam/",
     "/content/forms/af/"
   ]
